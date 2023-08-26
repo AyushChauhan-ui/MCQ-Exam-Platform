@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Group Exam</title>
+</head>
+<body>
+    <h1>Group Exam</h1>
+    <p>Welcome to the group exam, {{ current_user.username }}!</p>
+    <p>Participants:</p>
+    <ul>
+        {% for participant in participants %}
+            <li>{{ participant }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

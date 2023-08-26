@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Exam</title>
+</head>
+<body>
+    <h1>Create Exam</h1>
+    <form method="POST" action="{{ url_for('create_exam') }}">
+        {{ form.hidden_tag() }}
+        <label>Exam Title: {{ form.title }}</label><br>
+        <label>Exam Description: {{ form.description }}</label><br>
+        <label>Exam Duration (minutes): {{ form.duration }}</label><br>
+        <label>Number of Questions: {{ form.questions }}</label><br>
+        <button type="submit">Create Exam</button>
+    </form>
+</body>
+</html>

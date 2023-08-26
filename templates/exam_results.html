@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exam Results</title>
+</head>
+<body>
+    <h1>Exam Results</h1>
+    <p>Your Score: {{ user_score }} / {{ total_score }}</p>
+    <p>Correct Answers:</p>
+    <ul>
+        {% for question, answer in correct_answers.items() %}
+            <li>{{ question }}: {{ answer }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{{ url_for('index') }}">Back to Home</a>
+</body>
+</html>

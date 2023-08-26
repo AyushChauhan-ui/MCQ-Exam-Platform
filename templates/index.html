@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MCQ Exam Platform</title>
+</head>
+<body>
+    <h1>Welcome to the MCQ Exam Platform</h1>
+    {% if current_user.is_authenticated %}
+        <p>Hello, {{ current_user.name }}!</p>
+        <a href="{{ url_for('logout') }}">Logout</a>
+        <a href="{{ url_for('create_exam') }}">Create Exam</a>
+    {% else %}
+        <a href="{{ url_for('login') }}">Login</a>
+    {% endif %}
+</body>
+</html>

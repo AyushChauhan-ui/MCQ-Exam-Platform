@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Take Exam</title>
+</head>
+<body>
+    <h1>Exam</h1>
+    <p>Question {{ question_number }}: {{ question.question_text }}</p>
+    <form method="POST" action="{{ url_for('take_exam', exam_id=exam_id) }}">
+        {% for option in question.options %}
+            <input type="radio" name="answer" value="{{ option.id }}">{{ option.option_text }}<br>
+        {% endfor %}
+        <button type="submit">Submit Answer</button>
+    </form>
+</body>
+</html>
